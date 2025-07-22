@@ -1,14 +1,10 @@
-import Navbar from "./components/Header"
-import Footer from "./components/Footer"
+import AppRouter from './AppRouter'
 import './App.css'
 function App() {
-
   return (
     <>
-      <Navbar/>
-      <Footer/>
+      <AppRouter/>
     </>
   )
 }
-
 export default App
