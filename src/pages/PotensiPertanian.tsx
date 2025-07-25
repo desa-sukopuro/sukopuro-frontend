@@ -1,17 +1,32 @@
+import pertanianImg from "../assets/picture/pertanian.png";
+import KebunPohonDuren from "../assets/picture/Kebun Pohon Duren.png";
+import LadangSingkong from "../assets/picture/Ladang Singkong.png";
+import LadangTebu from "../assets/picture/Ladang Tebu.png";
+import LahanPersawahan from "../assets/picture/Lahan Persawahan.png";
+import PeternakanSapiPerah from "../assets/picture/Peternakan Sapi Perah.png";
+
+
+
 function PotensiPertanian() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div
-        className="relative h-[60vh] bg-cover bg-center bg-no-repeat"
+        className="relative h-[80vh] bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/placeholder.svg?height=600&width=1200')`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${pertanianImg})`,
         }}
       >
+        {/* Overlay gradasi putih di bawah */}
+        <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
+
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white text-center aestera">Perguliran</h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white text-center aestera drop-shadow-xl">
+            Pertanian
+          </h1>
         </div>
       </div>
+
 
       {/* Content Sections */}
       <div className="max-w-6xl mx-auto px-4 py-16 space-y-20">
@@ -30,7 +45,7 @@ function PotensiPertanian() {
           </div>
           <div className="order-first lg:order-last">
             <img
-              src="/placeholder.svg?height=300&width=400"
+              src={LadangSingkong}
               alt="Ladang Singkong"
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
@@ -41,7 +56,7 @@ function PotensiPertanian() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <img
-              src="/placeholder.svg?height=300&width=400"
+              src={LadangTebu}
               alt="Ladang Tebu"
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
@@ -77,31 +92,31 @@ function PotensiPertanian() {
           </div>
           <div className="order-first lg:order-last">
             <img
-              src="/placeholder.svg?height=300&width=400"
+              src={PeternakanSapiPerah}
               alt="Peternakan Sapi Perah"
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
           </div>
         </div>
 
-        {/* Kebun Pohon Durian */}
+        {/* Kebun Pohon Duren */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <img
-              src="/placeholder.svg?height=300&width=400"
-              alt="Kebun Pohon Durian"
+              src={KebunPohonDuren}
+              alt="Kebun Pohon Duren"
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
           </div>
           <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#053A45] aestera">Kebun Pohon Durian</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#053A45] aestera">Kebun Pohon Duren</h2>
             <p className="text-gray-700 leading-relaxed text-justify">
-              Kebun pohon durian adalah salah satu komoditas yang menjanjikan di Desa Sukopuro. Pohon durian yang tumbuh
-              subur di iklim tropis memberikan hasil panen yang melimpah setiap tahunnya. Durian yang dihasilkan
-              memiliki kualitas tinggi dengan rasa yang manis dan aroma yang khas. Selain durian, kebun ini juga
+              Kebun pohon Duren adalah salah satu komoditas yang menjanjikan di Desa Sukopuro. Pohon Duren yang tumbuh
+              subur di iklim tropis memberikan hasil panen yang melimpah setiap tahunnya. Duren yang dihasilkan
+              memiliki kualitas tinggi dengan rasa yang manis dan aroma yang khas. Selain Duren, kebun ini juga
               ditanami dengan berbagai jenis buah-buahan tropis lainnya seperti rambutan, mangga, dan jeruk. Kebun buah
-              durian yang luas dan tersusun rapi menjadi salah satu daya tarik tersendiri bagi wisata agro di desa ini.
-              Selain itu, hasil panen durian juga menjadi sumber penghasilan tambahan bagi petani setempat, terutama
+              Duren yang luas dan tersusun rapi menjadi salah satu daya tarik tersendiri bagi wisata agro di desa ini.
+              Selain itu, hasil panen Duren juga menjadi sumber penghasilan tambahan bagi petani setempat, terutama
               saat musim panen tiba yang biasanya berlangsung beberapa bulan dari pekerjaan utama mereka sebagai petani
               padi dan sayuran.
             </p>
@@ -113,7 +128,7 @@ function PotensiPertanian() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#053A45] aestera">Lahan Persawahan</h2>
           <div className="max-w-4xl mx-auto">
             <img
-              src="/placeholder.svg?height=400&width=800"
+              src={LahanPersawahan}
               alt="Lahan Persawahan"
               className="w-full h-80 object-cover rounded-lg shadow-lg mb-6"
             />
