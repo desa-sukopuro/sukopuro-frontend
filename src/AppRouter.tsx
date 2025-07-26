@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import LandingPage from "./pages/LandingPage";
 import Peta from "./pages/Peta";
+import Struktur from "./pages/StrukturDesa";
 
 const AppRouter = () => {
   return (
@@ -13,6 +14,10 @@ const AppRouter = () => {
         </Route>
         <Route path="/peta" element={<Layout />}>
           <Route index element={<Peta />} />
+          {/* <Route path="/profile" element={<Profile/>}/> Contoh ngisi route*/}
+        </Route>
+        <Route path="/struktur" element={<Layout />}>
+          <Route index element={<Struktur />} />
           {/* <Route path="/profile" element={<Profile/>}/> Contoh ngisi route*/}
         </Route>
         
