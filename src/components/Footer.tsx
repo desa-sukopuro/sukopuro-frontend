@@ -16,7 +16,7 @@ function Footer() {
             <li><a href="#profil" className="hover:text-[#ECA804]">Profil</a></li>
             <li><a href="#peta" className="hover:text-[#ECA804]">Peta</a></li>
             <li><a href="#potensi" className="hover:text-[#ECA804]">Potensi</a></li>
-            <li><a href="#pengumuman" className="hover:text-[#ECA804]">Pengumuman</a></li>
+            <li><a href="pengumuman" className="hover:text-[#ECA804]">Pengumuman</a></li>
             <li><a href="#struktur" className="hover:text-[#ECA804]">Struktur</a></li>
             <li><a href="#administrasi" className="hover:text-[#ECA804]">Administrasi</a></li>
           </ul>

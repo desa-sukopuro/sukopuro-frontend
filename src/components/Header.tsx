@@ -69,7 +69,7 @@ function Header() {
             </a>
           </li>
           <li>
-            <a href="#pengumuman" className="hover:text-[#ECA804]">
+            <a href="pengumuman" className="hover:text-[#ECA804]">
               Pengumuman
             </a>
           </li>

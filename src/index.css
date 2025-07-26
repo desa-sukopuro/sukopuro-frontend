@@ -4,8 +4,15 @@
   font-family: "Inria";
   src: url("./assets/fonts/Inria.ttf") format("truetype");
 }
-
-
 body{
   font-family:"Inria";
+}
+
+
+@font-face {
+  font-family: "Aestera";
+  src: url("./assets/fonts/Aestera.ttf") format("truetype");
+}
+h1{
+  font-family:'Aestera'
 }
