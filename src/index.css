@@ -1,11 +1,10 @@
 @import "tailwindcss";
-
 @font-face {
   font-family: "Inria";
   src: url("./assets/fonts/Inria.ttf") format("truetype");
 }
 
-
-body{
+html,body{
   font-family:"Inria";
+  overflow-x: hidden;
 }
