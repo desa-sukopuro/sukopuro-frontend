@@ -14,6 +14,7 @@ import Produkchalet from "../assets/picture/produk chalet.png"
 import produkMamiQu from "../assets/picture/produk MamiQu.png"
 import ProdukKeripik from "../assets/picture/Produk Keripik.png"
 import ProdukBarokah from "../assets/picture/Produk Barokah.png"
+import Panah from "../assets/picture/panah kiri.png"
 
 interface UmkmItem {
   id: number
@@ -106,12 +107,20 @@ function PotensiUmkm() {
         }}
 
       >
-        {/* Overlay gradasi putih di bawah */}
         <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
+        <div className="relative h-screen w-full">
+          <div className="absolute inset-0 flex justify-center items-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white text-center aestera">UMKM</h1>
+          </div>
 
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white text-center aestera">UMKM</h1>
+          <img
+            src={Panah}
+            alt="Ikon Kiri"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 md:w-10 md:h-10 object-contain"
+          />
         </div>
+
+
       </div>
 
       {/* Content Section */}

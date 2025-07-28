@@ -4,7 +4,7 @@ import LadangSingkong from "../assets/picture/Ladang Singkong.png";
 import LadangTebu from "../assets/picture/Ladang Tebu.png";
 import LahanPersawahan from "../assets/picture/Lahan Persawahan.png";
 import PeternakanSapiPerah from "../assets/picture/Peternakan Sapi Perah.png";
-
+import Panah from "../assets/picture/panah kiri.png"
 
 
 function PotensiPertanian() {
@@ -17,14 +17,19 @@ function PotensiPertanian() {
           backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${pertanianImg})`,
         }}
       >
-        {/* Overlay gradasi putih di bawah */}
         <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
+        <div className="relative h-screen w-full">
+          <div className="absolute inset-0 flex justify-center items-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white text-center aestera">Pertanian</h1>
+          </div>
 
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white text-center aestera drop-shadow-xl">
-            Pertanian
-          </h1>
+          <img
+            src={Panah}
+            alt="Ikon Kiri"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 md:w-10 md:h-10 object-contain"
+          />
         </div>
+
       </div>
 
 
