@@ -64,7 +64,7 @@ const ImageGallery: React.FC = () => {
                   {entry.desc.length > 100 ? entry.desc.slice(0, 100) + '...' : entry.desc}
                 </p>
                 <div className="flex justify-between text-sm">
-                  <span>📅 {entry.timestamp}</span>
+                  <span>{entry.timestamp}</span>
                 </div>
               </div>
             </div>
