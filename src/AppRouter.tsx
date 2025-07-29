@@ -27,7 +27,7 @@ const AppRouter = () => {
           <Route path="/peta" element={<Peta />} />
           <Route path="/struktur" element={<Struktur />} />
           <Route path="/potensi" element={<PotensiDesa />} />
-          <Route path="/pariwisata" element={<PariwisataDesa />} />
+          <Route path="/potensi-pariwisata" element={<PariwisataDesa />} />
           <Route path="/pengumuman" element={<PengumumanPage />} />
           <Route path="/pengumuman/:id" element={<DetailPengumuman />} />
           <Route path="*" element={<Error/>} />
@@ -38,3 +38,4 @@ const AppRouter = () => {
 };
 
 export default AppRouter;
+
