@@ -10,7 +10,7 @@ interface PersonCard {
 
 const OrganizationalStructure: React.FC = () => {
   // Sample data - replace with your actual data
-  const kepalaDeasa: PersonCard = {
+  const kepalaDesa: PersonCard = {
     name: "Yahut",
     position: "Kepala Desa",
     image: "/placeholder.svg?height=208&width=154",
@@ -113,7 +113,7 @@ const OrganizationalStructure: React.FC = () => {
         <div className="bg-gradient-to-b from-blue-50 to-blue-100 rounded-3xl p-8 md:p-12 border border-gray-200 relative min-h-[800px]">
           {/* Kepala Desa - Top Level */}
           <div className="flex flex-col items-center mb-12">
-            <PersonCardComponent person={kepalaDeasa} isLeader={true} />
+            <PersonCardComponent person={kepalaDesa} isLeader={true} />
             {/* Vertical line down */}
             <div className="w-0.5 h-12 bg-gray-400 mt-4"></div>
           </div>

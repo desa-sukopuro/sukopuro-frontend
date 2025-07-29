@@ -5,3 +5,9 @@
 .aestera{
     font-family:'Aestera'
 }
+.background{
+    background-image:url('../src/assets/picture/bg-fix.png');
+    background-repeat: repeat-y;
+    background-size: 1auto;
+    background-position: center center;
+  }
