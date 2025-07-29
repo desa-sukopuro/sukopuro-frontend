@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import fallback from '../assets/picture/No_Image_Available.svg'
+import { Link } from 'react-router-dom';
 
 const sheetID = '1Qqzs4O9nnBRUlA2wdO0JVS_qMP8oRGesCun3HN-VARs';
 const sheetName = 'Form Responses 1';
@@ -49,26 +50,25 @@ const ImageGallery: React.FC = () => {
       <h1 className="text-4xl font-aestera text-[#063247] mt-20 mb-4">Galeri Gambar</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {entries.map((entry, i) => (
-          <div
-            key={i}
-            className="bg-white rounded-xl shadow-md overflow-hidden hover:scale-[1.01] transition"
-          >
-            <img
-              src={entry.imageUrl}
-              onError={(e) => (e.currentTarget.src = fallbackImage)}
-              alt={entry.title}
-              className="w-full h-60 object-cover rounded-t-2xl"
-            />
-            <div className="p-4">
-              <h3 className="font-semibold text-lg mb-2">{entry.title}</h3>
-              <p className="text-sm text-gray-600 mb-4">
-                {entry.desc.length > 100 ? entry.desc.slice(0, 100) + '...' : entry.desc}
-              </p>
-              <div className="flex justify-between text-sm">
-                <span>{entry.timestamp}</span>
+          <Link to={`/pengumuman/${i}`} state={{ entry }}>
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:scale-[1.01] transition cursor-pointer">
+              <img
+                src={entry.imageUrl}
+                onError={(e) => (e.currentTarget.src = fallbackImage)}
+                alt={entry.title}
+                className="w-full h-60 object-cover rounded-t-2xl"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-lg mb-2">{entry.title}</h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  {entry.desc.length > 100 ? entry.desc.slice(0, 100) + '...' : entry.desc}
+                </p>
+                <div className="flex justify-between text-sm">
+                  <span>📅 {entry.timestamp}</span>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageGallery from '../components/ImageGallery';
 
-const GaleriPage = () => {
+const Pengumuman = () => {
   return (
     <div className="min-h-screen">
       <ImageGallery />
@@ -9,4 +9,4 @@ const GaleriPage = () => {
   );
 };
 
-export default GaleriPage;
+export default Pengumuman;

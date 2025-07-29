@@ -1,61 +1,12 @@
-import React from "react";
-import { CalendarDays, ArrowLeft } from "lucide-react";
-import pengumumanImage from "../assets/picture/DetailPengumuman.png";
+import React from 'react';
+import ImageDetail from '../components/ImageDetail';
 
-
-const PengumumanDetail: React.FC = () => {
+const DetailPengumuman = () => {
   return (
-    <main className="bg-white">
-      {/* Gambar Header */}
-      <div className="relative w-full h-[760px]">
-        <img
-          src={pengumumanImage}
-          alt="Gambar Pengumuman"
-          className="w-full h-full object-cover"
-        />
-
-        <div className="absolute inset-x-0 bottom-0 h-[150px] bg-gradient-to-t from-white/100 via-white/50 to-transparent"></div>
-        <div className="absolute bottom-35 md:left-25">
-          <h1 className="text-4xl md:text-6xl font font-serif text-white">
-            Judul Pengumuman
-          </h1>
-          <div className="flex items-center text-white mt-10 text-lg md:text-xl">
-            <CalendarDays className="w-5 h-5 mr-2" />
-            Senin, 1 Januari 2025
-          </div>
-
-        </div>
-      </div>
-
-      {/* Isi Pengumuman */}
-      <section className="px- md:px-25 py-10 mt-10">
-        <p className="text-gray-700 leading-relaxed text-justify mb-6">
-          Deskripsi Pengumuman Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
-        </p>
-        <p className="text-gray-700 leading-relaxed text-justify mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p className="text-gray-700 leading-relaxed text-justify">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt.
-        </p>
-
-        {/* Tombol Kembali */}
-        <div className="flex justify-center mt-10">
-          <button className="bg-yellow-400 text-black font-semibold px-10 py-1 rounded hover:bg-yellow-300 active:bg-yellow-500 flex items-center gap-2">
-            <ArrowLeft size={18} />
-            <a href="/pengumuman">Kembali</a>
-          </button>
-        </div>
-      </section>
-    </main>
+    <div className="min-h-screen">
+      <ImageDetail />
+    </div>
   );
 };
 
-export default PengumumanDetail;
+export default DetailPengumuman;
