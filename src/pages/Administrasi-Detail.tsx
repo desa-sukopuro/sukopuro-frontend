@@ -1,6 +1,16 @@
 const ProdukHukumDetail = () => {
   return (
-    <main className="bg-[url('/pattern.png')] bg-repeat px-4 py-10 text-gray-800 mt-16 max-w-7xl background">
+    <main className="px-4 py-10 text-gray-800 mt-16 max-w-7xl relative min-h-screen overflow-hidden">
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundRepeat: "repeat-y",
+          backgroundSize: "auto",
+          backgroundPosition: "center center",
+          opacity: 0.4,
+        }}
+      />
       <button className="bg-yellow-400 text-sm px-4 py-2 rounded mb-9 hover:bg-yellow-500 transition">
         ← Kembali
       </button>

@@ -1,14 +1,23 @@
-import React from 'react';
 import pengumumanpict from '../assets/picture/pengumuman pict.png';
 
 const PengumumanPage = () => {
   return (
-    <div
-      className="min-h-screen"
-    >
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Background Layer */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundRepeat: "repeat-y",
+          backgroundSize: "auto",
+          backgroundPosition: "center center",
+          opacity: 0.4,
+        }}
+      />
+
       {/* Judul Halaman */}
-      <section className="text-left px- md:px-25 py-10 mt-20">
-        <h1 className="text-4xl font-aestera text-[#063247]">Pengumuman</h1>
+      <section className="text-left px-6 md:px-25 py-10 mt-20">
+        <h1 className="text-4xl font-aestera text-[#063247] aestera">Pengumuman</h1>
         <p className="text-sm font-inria mt-2">Menyajikan pengumuman seputar desa Sukopuro</p>
       </section>
 
@@ -25,7 +34,6 @@ const PengumumanPage = () => {
                 alt="Pengumuman"
                 className="w-full h-40 object-cover min-h-[15rem] rounded-t-2xl"
               />
-
               <div className="p-4">
                 <h3 className="font-semibold text-lg mb-2">Judul Pengumuman</h3>
                 <p className="text-sm text-gray-600 mb-4">
@@ -39,7 +47,6 @@ const PengumumanPage = () => {
                   >
                     Selengkapnya →
                   </a>
-
                 </div>
               </div>
             </div>
@@ -55,8 +62,7 @@ const PengumumanPage = () => {
         {[1, 2, 3, 4, 5].map((n) => (
           <button
             key={n}
-            className={`px-3 py-1 rounded border border-[#063247] ${n === 1 ? 'bg-[#063247] text-white' : 'hover:bg-[#063247] hover:text-white'
-              }`}
+            className={`px-3 py-1 rounded border border-[#063247] ${n === 1 ? 'bg-[#063247] text-white' : 'hover:bg-[#063247] hover:text-white'}`}
           >
             {n}
           </button>
@@ -65,9 +71,9 @@ const PengumumanPage = () => {
           &gt;
         </button>
       </div>
-
     </div>
   );
 };
 
 export default PengumumanPage;
+

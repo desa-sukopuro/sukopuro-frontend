@@ -1,8 +1,18 @@
 import Carousel from "../components/Carousel";
 export default function LandingPage() {
     return (
-        <div className="min-h-screen">
-            <main className="pt-16 background">
+        <div className="relative min-h-screen overflow-hidden">
+            <div
+                className="absolute inset-0 -z-10"
+                style={{
+                    backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+                    backgroundRepeat: "repeat-y",
+                    backgroundSize: "auto auto",
+                    backgroundPosition: "center center",
+                    opacity: 0.4,
+                }}
+            />
+            <main className="pt-1">
                 <Carousel />
                 <section className="bg-gradient-to-b from-[#053A45] to-[#0D1C1F] py-16 px-4">
                     <div className="max-w-6xl mx-auto text-center">
@@ -15,7 +25,8 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </section>
-                <section className="py-16 px-4 ">
+                <section className="py-16 px-4">
+
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 aestera">Sejarah Sukopuro</h2>
 

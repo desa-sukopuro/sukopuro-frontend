@@ -7,7 +7,17 @@ import heroPariwisataImg from "../assets/picture/heropariwisata.png"
 
 const Pariwisata: React.FC = () => {
   return (
-    <div className="bg-white">
+    <div className="relative min-h-screen overflow-hidden">
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundRepeat: "repeat-y",
+          backgroundSize: "auto",
+          backgroundPosition: "center center",
+          opacity: 0.4,
+        }}
+      />
       {/* Hero Section */}
       <div className="relative h-screen overflow-hidden">
         <img

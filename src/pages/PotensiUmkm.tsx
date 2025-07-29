@@ -98,7 +98,17 @@ function PotensiUmkm() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen overflow-hidden relative">
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundRepeat: "repeat-y",
+          backgroundSize: "auto",
+          backgroundPosition: "center center",
+          opacity: 0.4,
+        }}
+      />
       {/* Hero Section */}
       <div
         className="relative h-[80vh] bg-cover bg-center bg-no-repeat"

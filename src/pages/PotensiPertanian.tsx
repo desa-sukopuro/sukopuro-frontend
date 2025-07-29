@@ -9,7 +9,17 @@ import Panah from "../assets/picture/panah kiri.png"
 
 function PotensiPertanian() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen relative overflow-hidden">
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundRepeat: "repeat-y",
+          backgroundSize: "auto",
+          backgroundPosition: "center center",
+          opacity: 0.4,
+        }}
+      />
       {/* Hero Section */}
       <div
         className="relative h-[80vh] bg-cover bg-center bg-no-repeat"
@@ -17,6 +27,7 @@ function PotensiPertanian() {
           backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${pertanianImg})`,
         }}
       >
+        
         <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
         <div className="relative h-screen w-full">
           <div className="absolute inset-0 flex justify-center items-center">
