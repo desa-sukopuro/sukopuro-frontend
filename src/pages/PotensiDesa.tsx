@@ -11,21 +11,21 @@ const PotensiDesa: React.FC = () => {
       description:
         "Desa Sukopuro menawarkan keindahan alam pedesaan, kebun buah, dan aktivitas pertanian tradisional sebagai wisata edukasi. Budaya lokal dan ramah tamah warga menambah daya tarik wisata.",
       image: pariwisataImg,
-      link: "/pariwisata",
+      link: "/potensi-pariwisata",
     },
     {
       title: "UMKM",
       description:
         "Desa Sukopuro memiliki UMKM unggulan berupa keripik singkong yang diolah melalui pendampingan sertifikasi halal dan SPARK, meningkatkan kapasitas daya saing dan desain produk.",
       image: umkmImg,
-      link: "/umkm",
+      link: "/potensi-umkm",
     },
     {
       title: "Pertanian",
       description:
         "Desa Sukopuro memiliki potensi pertanian yang besar dengan sumber daya alam yang berlimpah. Komoditas meliputi singkong, sayuran, dan buah lokal. Keramahan masyarakat membuat area pertanian ini berpotensi untuk agrowisata.",
       image: pertanianImg,
-      link: "/pertanian",
+      link: "/potensi-pertanian",
     },
   ]
 
