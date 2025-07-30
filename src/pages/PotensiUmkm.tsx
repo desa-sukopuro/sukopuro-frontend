@@ -86,11 +86,9 @@ function PotensiUmkm() {
     },
   ]
 
-  // Calculate pagination
   const totalPages = Math.ceil(umkmData.length / itemsPerPage)
   const startIndex = (currentPage - 1) * itemsPerPage
-  const endIndex = startIndex + itemsPerPage
-  const currentItems = umkmData.slice(startIndex, endIndex)
+  const currentItems = umkmData.slice(startIndex, startIndex + itemsPerPage)
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page)
@@ -100,125 +98,111 @@ function PotensiUmkm() {
   return (
     <div className="min-h-screen overflow-hidden relative">
       <div
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-10 opacity-40"
         style={{
           backgroundImage: "url('./src/assets/picture/bg-fix.png')",
           backgroundRepeat: "repeat-y",
           backgroundSize: "auto",
           backgroundPosition: "center center",
-          opacity: 0.4,
         }}
       />
-      {/* Hero Section */}
+
+      {/* Hero */}
       <div
-        className="relative h-[80vh] bg-cover bg-center bg-no-repeat"
+        className="relative h-[70vh] sm:h-[85vh] lg:h-screen bg-cover bg-center"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${UMKM})`,
         }}
-
       >
-        <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
-        <div className="relative h-screen w-full">
-          <div className="absolute inset-0 flex justify-center items-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white text-center aestera">UMKM</h1>
-          </div>
-
-          <img
-            src={Panah}
-            alt="Ikon Kiri"
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 md:w-10 md:h-10 object-contain"
-          />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-5xl sm:text-7xl font-bold text-white text-center aestera">UMKM</h1>
         </div>
-
-
+        <img
+          src={Panah}
+          alt="Ikon Kiri"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 md:w-10 md:h-10 object-contain"
+        />
+        <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
       </div>
 
-      {/* Content Section */}
-      <section className="py-8 md:py-12 lg:py-16 px-4">
+      {/* Konten */}
+      <section className="py-10 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-center text-gray-800 aestera">UMKM Desa Sukopuro</h2>
-          <p className="text-base md:text-lg leading-relaxed mb-3 md:mb-4 text-justify text-gray-600 max-w-4xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-800 aestera mb-4">
+            UMKM Desa Sukopuro
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 text-justify max-w-4xl mx-auto mb-12">
             Usaha Mikro, Kecil, dan Menengah (UMKM) di Desa Sukopuro berkembang dengan berbagai produk lokal unggulan yang mengandalkan bahan baku dari hasil pertanian desa setempat.
           </p>
-          
-          {/* UMKM Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
-          {currentItems.map((item) => (
-            <div
-              key={item.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
-            >
-              {/* Main layout: gambar utama dan konten */}
-              <div className="flex">
-                <div className="w-1/3 h-36 overflow-hidden flex-shrink-0">
-                  <img
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="flex-1 p-4">
-                  <h3 className="text-base font-bold text-[#053A45] aestera mb-3 leading-tight">{item.name}</h3>
-                  <div className="flex gap-1 items-start">
-                    <p className="text-gray-600 text-xs leading-relaxed flex-1">{item.description}</p>
-                    <div className="flex-shrink-0 w-20">
+
+          {/* Grid UMKM */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {currentItems.map((item) => (
+              <div
+                key={item.id}
+                className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 flex flex-col"
+              >
+                <div className="flex flex-col sm:flex-row">
+                  <div className="sm:w-1/3 w-full h-48 sm:h-auto overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="sm:w-2/3 p-4 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-lg font-bold text-[#053A45] aestera mb-2">{item.name}</h3>
+                      <p className="text-sm text-gray-600 text-justify mb-3">{item.description}</p>
+                    </div>
+                    <div className="flex items-center justify-between mt-2">
                       <img
-                        src={item.productImage || "/placeholder.svg"}
+                        src={item.productImage}
                         alt={`${item.name} product`}
-                        className="w-full max-h-16 object-contain rounded"
+                        className="w-16 h-16 object-contain"
                       />
+                      <span className="bg-[#ECA804] text-white px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap">
+                        {item.price}
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
-
-              {/* Badge harga selalu di bawah card */}
-              <div className="p-4 pt-2 flex justify-end">
-                <span className="bg-[#ECA804] text-white px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap">
-                  {item.price}
-                </span>
-              </div>
-            </div>
-          ))}
-
-        </div>
-
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="flex justify-center items-center space-x-2">
-            {/* Previous Button */}
-            <button
-              onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
-              disabled={currentPage === 1}
-              className="px-3 py-2 rounded-lg border border-gray-300 text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {"<"}
-            </button>
-
-            {/* Page Numbers */}
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <button
-                key={page}
-                onClick={() => handlePageChange(page)}
-                className={`px-3 py-2 rounded-lg border ${currentPage === page
-                  ? "bg-[#053A45] text-white border-[#053A45]"
-                  : "border-gray-300 text-gray-700 hover:bg-gray-50"
-                  }`}
-              >
-                {page}
-              </button>
             ))}
-
-            {/* Next Button */}
-            <button
-              onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
-              disabled={currentPage === totalPages}
-              className="px-3 py-2 rounded-lg border border-gray-300 text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {">"}
-            </button>
           </div>
-        )}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-2 mt-4">
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100 disabled:opacity-50"
+              >
+                &lt;
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => handlePageChange(page)}
+                  className={`px-3 py-1 border rounded-md font-semibold ${
+                    currentPage === page
+                      ? "bg-[#053A45] text-white border-[#053A45]"
+                      : "text-gray-700 border-gray-300 hover:bg-gray-100"
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+              <button
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-100 disabled:opacity-50"
+              >
+                &gt;
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </div>
