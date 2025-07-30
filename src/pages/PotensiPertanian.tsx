@@ -1,10 +1,10 @@
-import pertanianImg from "./pertanian.png";
-import KebunPohonDuren from "./Kebun Pohon Duren.png";
-import LadangSingkong from "./Ladang Singkong.png";
-import LadangTebu from "./Ladang Tebu.png";
-import LahanPersawahan from "./Lahan Persawahan.png";
-import PeternakanSapiPerah from "./Peternakan Sapi Perah.png";
-import Panah from "./panah kiri.png"
+import pertanianImg from "/pertanian.png";
+import KebunPohonDuren from "/Kebun Pohon Duren.png";
+import LadangSingkong from "/Ladang Singkong.png";
+import LadangTebu from "/Ladang Tebu.png";
+import LahanPersawahan from "/Lahan Persawahan.png";
+import PeternakanSapiPerah from "/Peternakan Sapi Perah.png";
+import Panah from "/panah kiri.png"
 
 
 function PotensiPertanian() {

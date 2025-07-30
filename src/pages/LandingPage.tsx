@@ -1,5 +1,5 @@
 import Carousel from "../components/Carousel";
-import petalogo from "./peta-logo.svg";
+import petalogo from "/peta-logo.svg";
 export default function LandingPage() {
     return (
         <div className="relative min-h-screen overflow-hidden">

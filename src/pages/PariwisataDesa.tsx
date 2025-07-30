@@ -1,9 +1,9 @@
 import type React from "react"
-import cobanJaheImg from "./cobanjahe.png"
-import cobanBarnawiImg from "./cobanbarnawi.png"
-import kolamPemancingImg from "./kolampemancingan.png"
-import hiburanMalamImg from "./acaramalam.png"
-import heroPariwisataImg from "./heropariwisata.png"
+import cobanJaheImg from "/cobanjahe.png"
+import cobanBarnawiImg from "/cobanbarnawi.png"
+import kolamPemancingImg from "/kolampemancingan.png"
+import hiburanMalamImg from "/acaramalam.png"
+import heroPariwisataImg from "/heropariwisata.png"
 
 const Pariwisata: React.FC = () => {
   return (

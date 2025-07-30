@@ -1,6 +1,7 @@
 "use client"
 import type React from "react"
-import strukturDesaImage from "./struktur-desa.svg"
+import strukturDesaImage from "/struktur-desa.svg"
+
 
 const OrganizationalStructure: React.FC = () => {
   return (

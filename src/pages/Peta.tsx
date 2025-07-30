@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef } from "react"
-import googleMapsIcon from "./GoogleMaps.svg"
+import googleMapsIcon from "/GoogleMaps.svg"
 
 
 declare global {
