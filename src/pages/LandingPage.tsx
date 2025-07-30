@@ -36,7 +36,7 @@ export default function LandingPage() {
                                 <div className="md:flex">
                                     <div className="md:w-1/2">
                                         <img
-                                            src="./peta.png"
+                                            src="/peta.png"
                                             alt="Peta Kuno"
                                             className="w-full h-64 md:h-full object-cover"
                                         />
@@ -52,7 +52,7 @@ export default function LandingPage() {
                                 <div className="md:flex md:flex-row-reverse">
                                     <div className="md:w-1/2">
                                         <img
-                                            src="./elo.png"
+                                            src="/elo.png"
                                             alt="Buah Lempung"
                                             className="w-full h-64 md:h-full object-cover"
                                         />
@@ -71,7 +71,7 @@ export default function LandingPage() {
                     <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden my-10">
                         <div className="md:h-90">
                             <img
-                                src="./bromo.png"
+                                src="/bromo.png"
                                 alt="Gunung Bromo"
                                 className="w-full h-64 md:h-full object-cover"
                             />
