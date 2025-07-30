@@ -1,9 +1,9 @@
 import type React from "react";
 import { Link } from "react-router-dom";
-import pariwisataImg from "../assets/picture/pariwisata.png";
-import umkmImg from "../assets/picture/umkm.png";
-import pertanianImg from "../assets/picture/pertanian.png";
-import bgImage from "../assets/picture/bg-fix.png"; // pastikan path ini benar
+import pariwisataImg from "./pariwisata.png";
+import umkmImg from "./umkm.png";
+import pertanianImg from "./pertanian.png";
+import bgImage from "./bg-fix.png"; // pastikan path ini benar
 
 const PotensiDesa: React.FC = () => {
   const potensiList = [

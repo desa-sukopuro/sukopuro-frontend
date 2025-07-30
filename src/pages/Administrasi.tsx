@@ -57,7 +57,7 @@ const Administrasi: React.FC = () => {
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundImage: "url('./bg-fix.png')",
           backgroundRepeat: "repeat-y",
           backgroundSize: "auto",
           backgroundPosition: "center center",
@@ -83,7 +83,7 @@ const Administrasi: React.FC = () => {
 
               <div className="flex-shrink-0 order-1 lg:order-2">
                 <div className="w-48 h-48 md:w-60 md:h-60 lg:w-64 lg:h-64 relative">
-                  <img src="./src/assets/picture/administrasi.svg" alt="" />
+                  <img src="./administrasi.svg" alt="" />
                 </div>
               </div>
             </div>

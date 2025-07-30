@@ -1,9 +1,9 @@
 import type React from "react"
-import cobanJaheImg from "../assets/picture/cobanjahe.png"
-import cobanBarnawiImg from "../assets/picture/cobanbarnawi.png"
-import kolamPemancingImg from "../assets/picture/kolampemancingan.png"
-import hiburanMalamImg from "../assets/picture/acaramalam.png"
-import heroPariwisataImg from "../assets/picture/heropariwisata.png"
+import cobanJaheImg from "./cobanjahe.png"
+import cobanBarnawiImg from "./cobanbarnawi.png"
+import kolamPemancingImg from "./kolampemancingan.png"
+import hiburanMalamImg from "./acaramalam.png"
+import heroPariwisataImg from "./heropariwisata.png"
 
 const Pariwisata: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Pariwisata: React.FC = () => {
       <div
         className="absolute inset-0 -z-10 opacity-40"
         style={{
-          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundImage: "url('./bg-fix.png')",
           backgroundRepeat: "repeat-y",
           backgroundSize: "auto",
           backgroundPosition: "center",

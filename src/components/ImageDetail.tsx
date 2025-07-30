@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import fallback from '../assets/picture/No_Image_Available.svg';
-import bgImage from '../assets/picture/bg-fix.png';
+import fallback from './No_Image_Available.svg';
+import bgImage from './bg-fix.png';
 
 const ImageDetail: React.FC = () => {
   const location = useLocation();

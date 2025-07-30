@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef } from "react"
-import googleMapsIcon from "../assets/picture/GoogleMaps.svg"
+import googleMapsIcon from "./GoogleMaps.svg"
 
 
 declare global {
@@ -73,7 +73,7 @@ const PetaPage = () => {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage:"url('../src/assets/picture/bg-fix.png')",
+          backgroundImage:"url('./bg-fix.png')",
           backgroundRepeat: "repeat-y",
           backgroundSize: "auto",
           backgroundPosition: "center center",
@@ -84,7 +84,7 @@ const PetaPage = () => {
         <div
           className="relative min-h-screen bg-cover bg-center bg-no-repeat pt-20"
           style={{
-            backgroundImage: "url('../src/assets/picture/image-17.png')", 
+            backgroundImage: "url('./image-17.png')", 
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-black/20 to-transparent"></div>

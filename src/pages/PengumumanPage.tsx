@@ -7,7 +7,7 @@ const Pengumuman = () => {
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundImage: "url('./bg-fix.png')",
           backgroundRepeat: "repeat-y",
           backgroundSize: "auto",
           backgroundPosition: "center center",

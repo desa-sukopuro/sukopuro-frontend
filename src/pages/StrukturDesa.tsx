@@ -1,6 +1,6 @@
 "use client"
 import type React from "react"
-import strukturDesaImage from "../assets/picture/struktur-desa.svg"
+import strukturDesaImage from "./struktur-desa.svg"
 
 const OrganizationalStructure: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const OrganizationalStructure: React.FC = () => {
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: "url('../src/assets/picture/bg-fix.png')",
+          backgroundImage: "url('./bg-fix.png')",
           backgroundRepeat: "repeat-y",
           backgroundSize: "auto",
           backgroundPosition: "center center",

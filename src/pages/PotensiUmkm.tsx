@@ -1,20 +1,20 @@
 "use client"
 
 import { useState } from "react"
-import Bakso from "../assets/picture/Bakso Balai Desa.png"
-import Boba from "../assets/picture/Boba Susu.png"
-import Chalet from "../assets/picture/Chalet.png"
-import Keripik from "../assets/picture/Keripik Khabibah.png.png"
-import MamiQu from "../assets/picture/MamiQu.png"
-import WarungBarokah from "../assets/picture/Warung Barokah.png"
-import UMKM from "../assets/picture/UMKM.png"
-import ProdukBoba from "../assets/picture/produk boba.png"
-import ProdukBakso from "../assets/picture/Produk Bakso.png"
-import Produkchalet from "../assets/picture/produk chalet.png"
-import produkMamiQu from "../assets/picture/produk MamiQu.png"
-import ProdukKeripik from "../assets/picture/Produk Keripik.png"
-import ProdukBarokah from "../assets/picture/Produk Barokah.png"
-import Panah from "../assets/picture/panah kiri.png"
+import Bakso from "./Bakso Balai Desa.png"
+import Boba from "./Boba Susu.png"
+import Chalet from "./Chalet.png"
+import Keripik from "./Keripik Khabibah.png.png"
+import MamiQu from "./MamiQu.png"
+import WarungBarokah from "./Warung Barokah.png"
+import UMKM from "./UMKM.png"
+import ProdukBoba from "./produk boba.png"
+import ProdukBakso from "./Produk Bakso.png"
+import Produkchalet from "./produk chalet.png"
+import produkMamiQu from "./produk MamiQu.png"
+import ProdukKeripik from "./Produk Keripik.png"
+import ProdukBarokah from "./Produk Barokah.png"
+import Panah from "./panah kiri.png"
 
 interface UmkmItem {
   id: number
@@ -100,7 +100,7 @@ function PotensiUmkm() {
       <div
         className="absolute inset-0 -z-10 opacity-40"
         style={{
-          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundImage: "url('./bg-fix.png')",
           backgroundRepeat: "repeat-y",
           backgroundSize: "auto",
           backgroundPosition: "center center",

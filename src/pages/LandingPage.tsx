@@ -5,7 +5,7 @@ export default function LandingPage() {
             <div
                 className="absolute inset-0 -z-10"
                 style={{
-                    backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+                    backgroundImage: "url('./bg-fix.png')",
                     backgroundRepeat: "repeat-y",
                     backgroundSize: "auto auto",
                     backgroundPosition: "center center",
@@ -21,7 +21,7 @@ export default function LandingPage() {
                             Desa Sukopuro merupakan sebuah desa indah yang berada di Kecamatan Jabung, Kabupaten Malang. Desa ini berada di ketinggian antara 548 hingga 768 meter di atas permukaan laut, sehingga terkenal sebagai desa yang memiliki suhu yang sejuk dengan rata-rata sekitar 22°C. Sebagian besar wilayah desa ini merupakan lahan pertanian  yang mencakup sekitar 59% dari total luas desa. Komoditas utama yang dibudidayakan di Desa Sukopuro adalah tebu dan pohon singkong.
                         </p>
                         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-                            <img src="./src/assets/picture/peta-logo.svg" alt="" />
+                            <img src="./peta-logo.svg" alt="" />
                         </div>
                     </div>
                 </section>
@@ -35,7 +35,7 @@ export default function LandingPage() {
                                 <div className="md:flex">
                                     <div className="md:w-1/2">
                                         <img
-                                            src="./src/assets/picture/peta.png"
+                                            src="./peta.png"
                                             alt="Peta Kuno"
                                             className="w-full h-64 md:h-full object-cover"
                                         />
@@ -51,7 +51,7 @@ export default function LandingPage() {
                                 <div className="md:flex md:flex-row-reverse">
                                     <div className="md:w-1/2">
                                         <img
-                                            src="./src/assets/picture/elo.png"
+                                            src="./elo.png"
                                             alt="Buah Lempung"
                                             className="w-full h-64 md:h-full object-cover"
                                         />
@@ -70,7 +70,7 @@ export default function LandingPage() {
                     <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden my-10">
                         <div className="md:h-90">
                             <img
-                                src="./src/assets/picture/bromo.png"
+                                src="./bromo.png"
                                 alt="Gunung Bromo"
                                 className="w-full h-64 md:h-full object-cover"
                             />

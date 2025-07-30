@@ -1,10 +1,10 @@
-import pertanianImg from "../assets/picture/pertanian.png";
-import KebunPohonDuren from "../assets/picture/Kebun Pohon Duren.png";
-import LadangSingkong from "../assets/picture/Ladang Singkong.png";
-import LadangTebu from "../assets/picture/Ladang Tebu.png";
-import LahanPersawahan from "../assets/picture/Lahan Persawahan.png";
-import PeternakanSapiPerah from "../assets/picture/Peternakan Sapi Perah.png";
-import Panah from "../assets/picture/panah kiri.png"
+import pertanianImg from "./pertanian.png";
+import KebunPohonDuren from "./Kebun Pohon Duren.png";
+import LadangSingkong from "./Ladang Singkong.png";
+import LadangTebu from "./Ladang Tebu.png";
+import LahanPersawahan from "./Lahan Persawahan.png";
+import PeternakanSapiPerah from "./Peternakan Sapi Perah.png";
+import Panah from "./panah kiri.png"
 
 
 function PotensiPertanian() {
@@ -13,7 +13,7 @@ function PotensiPertanian() {
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundImage: "url('./bg-fix.png')",
           backgroundRepeat: "repeat-y",
           backgroundSize: "auto",
           backgroundPosition: "center center",

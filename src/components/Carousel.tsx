@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const images = [
   "./gapura.svg",
-  "./src/assets/picture/carousel_2.svg",
-  "./src/assets/picture/carousel_3.svg",
+  "./carousel_2.svg",
+  "./carousel_3.svg",
 ];
 
 export default function Carousel() {
