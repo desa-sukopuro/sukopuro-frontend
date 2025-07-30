@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
-    <footer className="bg-[#053A45] text-white py-8 px-4 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <footer className="bg-[#053A45] text-white py-8 px-8 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         <div>
-          <h2 className="md:text-5xl text-4xl font-semibold mb-2 aestera leading-tight">
+          <h2 className="md:text-4xl text-3xl font-semibold mb-2 aestera leading-tight">
             <span className="block">Desa</span>
             <span className="block mt-2">Sukopuro</span>
           </h2>

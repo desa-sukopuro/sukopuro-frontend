@@ -17,13 +17,14 @@ function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-[#053A45] backdrop-blur-sm shadow-sm z-50 animate__animated animate__fadeInDown">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center space-x-3">
-            <Link to="/" className="w-10 h-10 flex items-center justify-center">
+            <Link to="/" className="w-12 h-12 md:w-15 md:h-15 flex items-center justify-center">
               <img src="/logo desa 2.svg" alt="Logo Desa" className="w-full h-auto" />
             </Link>
             <Link to="/">
-              <h1 className="text-xl font-bold text-white">Desa Sukopuro</h1>
+              <h1 className="md:text-md text-sm font-bold text-white aestera">Desa Sukopuro</h1>
+              <p className="text-sm text-white">Kec. Jabung. Kab. Malang</p>
             </Link>
           </div>
 

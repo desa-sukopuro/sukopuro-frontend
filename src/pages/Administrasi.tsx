@@ -92,8 +92,8 @@ const Administrasi: React.FC = () => {
 
         {/* Produk Hukum section */}
         <section className="py-8 md:py-8 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 aestera text-[#014c51]">Produk Hukum</h1>
+          <div className="max-w-6xl mx-auto text-[#014c51] ">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 aestera">Produk Hukum</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {currentEntries.map((entry, i) => (
                 <div
