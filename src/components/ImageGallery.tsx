@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import fallback from '../assets/picture/No_Image_Available.svg'
+import fallback from '../assets/picture/No_Image_Available.svg';
 import { Link } from 'react-router-dom';
 
 const sheetID = '1Qqzs4O9nnBRUlA2wdO0JVS_qMP8oRGesCun3HN-VARs';
@@ -14,10 +14,11 @@ interface ImageEntry {
   imageUrl: string;
 }
 
+const itemsPerPage = 6;
+
 const ImageGallery: React.FC = () => {
   const [entries, setEntries] = useState<ImageEntry[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6; // 3 kolom × 2 baris
 
   useEffect(() => {
     const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?sheet=${sheetName}&tq=${encodeURIComponent(query)}`;
@@ -47,27 +48,32 @@ const ImageGallery: React.FC = () => {
       });
   }, []);
 
-  // Pagination logic
   const totalPages = Math.ceil(entries.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentEntries = entries.slice(startIndex, startIndex + itemsPerPage);
 
   const handlePageChange = (page: number) => {
-    setCurrentPage(page);
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
   };
 
   return (
-    <section>
-      {/* Grid dengan ukuran card yang sama */}
+    <section className="pb-10">
+      {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {currentEntries.map((entry, i) => (
-          <Link key={startIndex + i} to={`/pengumuman/${startIndex + i}`} state={{ entry }}>
+          <Link
+            key={startIndex + i}
+            to={`/pengumuman/${startIndex + i}`}
+            state={{ entry }}
+          >
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:scale-[1.01] transition cursor-pointer h-full flex flex-col">
               <img
                 src={entry.imageUrl}
                 onError={(e) => (e.currentTarget.src = fallbackImage)}
                 alt={entry.title}
-                className="w-full h-48 object-cover rounded-t-2xl flex-shrink-0"
+                className="w-full h-48 object-cover rounded-t-2xl"
               />
               <div className="p-4 flex flex-col flex-grow">
                 <h3 className="font-semibold text-lg mb-2 line-clamp-2">{entry.title}</h3>
@@ -85,35 +91,35 @@ const ImageGallery: React.FC = () => {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex justify-center items-center space-x-2">
+        <div className="flex justify-center gap-2 pt-4">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="px-3 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition"
+            className="border border-[#063247] px-3 py-1 rounded hover:bg-[#063247] hover:text-white disabled:opacity-50"
           >
-            Previous
+            &lt;
           </button>
-          
+
           {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
             <button
               key={page}
               onClick={() => handlePageChange(page)}
-              className={`px-3 py-2 rounded-lg transition ${
+              className={`px-3 py-1 rounded border border-[#063247] ${
                 currentPage === page
-                  ? 'bg-[#11403A] text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  ? 'bg-[#063247] text-white'
+                  : 'hover:bg-[#063247] hover:text-white'
               }`}
             >
               {page}
             </button>
           ))}
-          
+
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="px-3 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition"
+            className="border border-[#063247] px-3 py-1 rounded hover:bg-[#063247] hover:text-white disabled:opacity-50"
           >
-            Next
+            &gt;
           </button>
         </div>
       )}
