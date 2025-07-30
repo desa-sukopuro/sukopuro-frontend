@@ -9,7 +9,17 @@ import Panah from "../assets/picture/panah kiri.png"
 
 function PotensiPertanian() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen relative overflow-hidden">
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundRepeat: "repeat-y",
+          backgroundSize: "auto",
+          backgroundPosition: "center center",
+          opacity: 0.4,
+        }}
+      />
       {/* Hero Section */}
       <div
         className="relative h-[80vh] bg-cover bg-center bg-no-repeat"
@@ -17,6 +27,7 @@ function PotensiPertanian() {
           backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${pertanianImg})`,
         }}
       >
+        
         <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
         <div className="relative h-screen w-full">
           <div className="absolute inset-0 flex justify-center items-center">
@@ -34,19 +45,26 @@ function PotensiPertanian() {
 
 
       {/* Content Sections */}
-      <div className="max-w-6xl mx-auto px-4 py-16 space-y-20">
-        {/* Ladang Singkong */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#053A45] aestera">Ladang Singkong</h2>
-            <p className="text-gray-700 leading-relaxed text-justify">
-              Ladang singkong di Desa Sukopuro merupakan salah satu usaha pertanian yang penting bagi warga setempat.
-              Singkong tumbuh subur di tanah yang subur dan iklim yang mendukung. Ladang ini tersebar di berbagai
-              wilayah desa, mulai dari area dataran rendah hingga sedikit berbukit. Singkong tidak hanya menjadi sumber
-              pangan alternatif, tetapi juga menjadi komoditas ekonomi yang menguntungkan bagi petani lokal. Hasil panen
-              singkong biasanya dijual ke pasar tradisional dan juga diolah menjadi berbagai produk makanan tradisional
-              seperti keripik, tepung singkong, dan makanan ringan lainnya.
-            </p>
+      <section className="py-8 md:py-12 lg:py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-center text-gray-800 aestera">Potensi Pertanian Desa Sukopuro</h2>
+          <p className="text-base md:text-lg leading-relaxed mb-3 md:mb-4 text-justify text-gray-600 max-w-4xl mx-auto mb-12">
+            Desa Sukopuro memiliki potensi pertanian yang besar dengan sumber daya alam yang berlimpah dan kondisi geografis yang mendukung berbagai jenis tanaman pertanian.
+          </p>
+          
+          <div className="space-y-20">
+            {/* Ladang Singkong */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4">
+                <h3 className="text-3xl md:text-4xl font-bold text-[#053A45] aestera">Ladang Singkong</h3>
+                <p className="text-gray-700 leading-relaxed text-justify">
+                  Ladang singkong di Desa Sukopuro merupakan salah satu usaha pertanian yang penting bagi warga setempat.
+                  Singkong tumbuh subur di tanah yang subur dan iklim yang mendukung. Ladang ini tersebar di berbagai
+                  wilayah desa, mulai dari area dataran rendah hingga sedikit berbukit. Singkong tidak hanya menjadi sumber
+                  pangan alternatif, tetapi juga menjadi komoditas ekonomi yang menguntungkan bagi petani lokal. Hasil panen
+                  singkong biasanya dijual ke pasar tradisional dan juga diolah menjadi berbagai produk makanan tradisional
+                  seperti keripik, tepung singkong, dan makanan ringan lainnya.
+                </p>
           </div>
           <div className="order-first lg:order-last">
             <img
@@ -150,7 +168,9 @@ function PotensiPertanian() {
             </p>
           </div>
         </div>
-      </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

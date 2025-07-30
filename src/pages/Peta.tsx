@@ -91,15 +91,7 @@ const PetaPage = () => {
 
           <div className="relative z-10 container mx-auto px-6 pt-24 pb-16">
             <div className="text-center mb-16">
-              <h1
-                className="text-7xl md:text-7xl lg:text-8xl font-bold text-white mb-8"
-                style={{
-                  textShadow: "3px 3px 6px rgba(0,0,0,0.8)",
-                  letterSpacing: "0.02em",
-                }}
-              >
-                Peta Sukopuro
-              </h1>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white aestera">Peta Sukopuro</h1>
             </div>
 
             <div className="max-w-5xl mx-auto flex justify-center">

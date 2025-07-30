@@ -5,9 +5,9 @@
 .aestera{
     font-family:'Aestera'
 }
-.background{
+.bacdkground{
     background-image:url('./assets/picture/bg-fix.png');
     background-repeat: repeat-y;
-    background-size: 1auto;
+    background-size: cover;
     background-position: center center;
-  }
+}

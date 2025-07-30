@@ -22,8 +22,8 @@ const AppRouter = () => {
           <Route index element={<LandingPage />} />
           <Route path="/administrasi" element={<Administrasi/>} />
           <Route path="/administrasi-detail" element={<AdministrasiDetail/>} />
-          <Route path="/potensi-pertanian" element={<PotensiPertanian />} />
-          <Route path="/potensi-umkm" element={<PotensiUmkm />} />
+          <Route path="/pertanian" element={<PotensiPertanian />} />
+          <Route path="/umkm" element={<PotensiUmkm />} />
           <Route path="/peta" element={<Peta />} />
           <Route path="/struktur" element={<Struktur />} />
           <Route path="/potensi" element={<PotensiDesa />} />

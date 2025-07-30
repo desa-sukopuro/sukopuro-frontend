@@ -1,13 +1,23 @@
 import Carousel from "../components/Carousel";
 export default function LandingPage() {
     return (
-        <div className="min-h-screen">
-            <main className="pt-16 background">
+        <div className="relative min-h-screen overflow-hidden">
+            <div
+                className="absolute inset-0 -z-10"
+                style={{
+                    backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+                    backgroundRepeat: "repeat-y",
+                    backgroundSize: "auto auto",
+                    backgroundPosition: "center center",
+                    opacity: 0.4,
+                }}
+            />
+            <main className="pt-1">
                 <Carousel />
-                <section className="bg-gradient-to-b from-[#053A45] to-[#0D1C1F] py-16 px-4">
+                <section className="bg-gradient-to-b from-[#053A45] to-[#0D1C1F] py-8 md:py-12 lg:py-16 px-4">
                     <div className="max-w-6xl mx-auto text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#ECA804] mb-8 aestera">Tentang Sukopuro</h2>
-                        <p className="text-white text-base md:text-lg leading-relaxed max-w-4xl mx-auto mb-12 text-justify">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-[#ECA804] aestera">Tentang Sukopuro</h2>
+                        <p className="text-white text-base md:text-lg leading-relaxed mb-3 md:mb-4 text-justify max-w-4xl mx-auto mb-12">
                             Desa Sukopuro merupakan sebuah desa indah yang berada di Kecamatan Jabung, Kabupaten Malang. Desa ini berada di ketinggian antara 548 hingga 768 meter di atas permukaan laut, sehingga terkenal sebagai desa yang memiliki suhu yang sejuk dengan rata-rata sekitar 22°C. Sebagian besar wilayah desa ini merupakan lahan pertanian  yang mencakup sekitar 59% dari total luas desa. Komoditas utama yang dibudidayakan di Desa Sukopuro adalah tebu dan pohon singkong.
                         </p>
                         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
@@ -15,9 +25,10 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </section>
-                <section className="py-16 px-4 ">
+                <section className="py-8 md:py-12 lg:py-16 px-4">
+
                     <div className="max-w-6xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 aestera">Sejarah Sukopuro</h2>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-center text-gray-800 aestera">Sejarah Sukopuro</h2>
 
                         <div className="space-y-8">
                             <div className="bg-white rounded-xl shadow-lg overflow-hidden">

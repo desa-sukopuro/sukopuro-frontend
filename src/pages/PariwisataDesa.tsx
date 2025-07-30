@@ -7,7 +7,17 @@ import heroPariwisataImg from "../assets/picture/heropariwisata.png"
 
 const Pariwisata: React.FC = () => {
   return (
-    <div className="bg-white">
+    <div className="relative min-h-screen overflow-hidden">
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundRepeat: "repeat-y",
+          backgroundSize: "auto",
+          backgroundPosition: "center center",
+          opacity: 0.4,
+        }}
+      />
       {/* Hero Section */}
       <div className="relative h-screen overflow-hidden">
         <img
@@ -31,42 +41,48 @@ const Pariwisata: React.FC = () => {
       </div>
 
       {/* Content Sections */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        {/* Coban Jahe Section */}
-        <section className="mb-24">
-          <h2 className="text-5xl font-bold text-[#11403A] mb-12">Coban Jahe</h2>
-          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
-            <div className="order-2 lg:order-1">
-              <div className="h-full">
-                <img
-                  src={cobanJaheImg || "/placeholder.svg"}
-                  alt="Coban Jahe waterfall"
-                  className="w-full h-full object-cover rounded-2xl shadow-xl border-0"
-                />
+      <section className="py-8 md:py-12 lg:py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-center text-gray-800 aestera">Destinasi Wisata Desa Sukopuro</h2>
+          <p className="text-base md:text-lg leading-relaxed mb-3 md:mb-4 text-justify text-gray-600 max-w-4xl mx-auto mb-12">
+            Desa Sukopuro menawarkan berbagai destinasi wisata alam yang memukau dengan keindahan air terjun, kolam pemancingan, dan hiburan malam yang menarik untuk dikunjungi.
+          </p>
+          
+          {/* Coban Jahe Section */}
+          <div className="mb-24">
+            <h3 className="text-5xl font-bold text-[#11403A] mb-12 aestera">Coban Jahe</h3>
+            <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+              <div className="order-2 lg:order-1">
+                <div className="h-full">
+                  <img
+                    src={cobanJaheImg || "/placeholder.svg"}
+                    alt="Coban Jahe waterfall"
+                    className="w-full h-full object-cover rounded-2xl shadow-xl border-0"
+                  />
+                </div>
+              </div>
+              <div className="space-y-6 order-1 lg:order-2">
+                <p className="text-xl font-semibold text-[#11403A] leading-relaxed">
+                  Nama "Jahe" berasal dari kata "pejahe" dalam bahasa Jawa, yang berarti "yang gugur"
+                </p>
+                <p className="text-gray-700 text-justify leading-relaxed text-lg">
+                  Coban Jahe adalah destinasi wisata alam yang terletak di Desa Taji, Kecamatan Jabung, Kabupaten Malang.
+                  Air terjun setinggi 45 meter ini dikelilingi pepohonan rindang yang menciptakan suasana sejuk dan
+                  menyegarkan, cocok untuk melepas penat. Berjarak sekitar satu jam dari pusat Kota Malang, Coban Jahe
+                  mudah diakses dan menjadi favorit wisatawan lokal maupun luar daerah. Selain panorama alamnya yang
+                  memukau, tempat ini juga dilengkapi berbagai fasilitas seperti flying fox, river tubing, camping ground,
+                  playground anak, serta kafe unik di tepi sungai yang memungkinkan pengunjung bersantai sambil merendam
+                  kaki. Spot-spot foto menarik seperti gardu pandang dan jembatan bambu turut menambah daya tarik,
+                  menjadikan Coban Jahe cocok untuk wisata keluarga, healing, hingga sesi foto prewedding.
+                </p>
               </div>
             </div>
-            <div className="space-y-6 order-1 lg:order-2">
-              <p className="text-xl font-semibold text-[#11403A] leading-relaxed">
-                Nama "Jahe" berasal dari kata "pejahe" dalam bahasa Jawa, yang berarti "yang gugur"
-              </p>
-              <p className="text-gray-700 text-justify leading-relaxed text-lg">
-                Coban Jahe adalah destinasi wisata alam yang terletak di Desa Taji, Kecamatan Jabung, Kabupaten Malang.
-                Air terjun setinggi 45 meter ini dikelilingi pepohonan rindang yang menciptakan suasana sejuk dan
-                menyegarkan, cocok untuk melepas penat. Berjarak sekitar satu jam dari pusat Kota Malang, Coban Jahe
-                mudah diakses dan menjadi favorit wisatawan lokal maupun luar daerah. Selain panorama alamnya yang
-                memukau, tempat ini juga dilengkapi berbagai fasilitas seperti flying fox, river tubing, camping ground,
-                playground anak, serta kafe unik di tepi sungai yang memungkinkan pengunjung bersantai sambil merendam
-                kaki. Spot-spot foto menarik seperti gardu pandang dan jembatan bambu turut menambah daya tarik,
-                menjadikan Coban Jahe cocok untuk wisata keluarga, healing, hingga sesi foto prewedding.
-              </p>
-            </div>
           </div>
-        </section>
 
-        {/* Coban Barnawi Section */}
-        <section className="mb-24">
-          <h2 className="text-5xl font-bold text-[#11403A] mb-12 text-right">Coban Barnawi</h2>
-          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+          {/* Coban Barnawi Section */}
+          <div className="mb-24">
+            <h3 className="text-5xl font-bold text-[#11403A] mb-12 text-right aestera">Coban Barnawi</h3>
+            <div className="grid lg:grid-cols-2 gap-16 items-stretch">
             <div className="space-y-6">
               <p className="text-gray-700 text-justify leading-relaxed text-lg">
                 Coban Barnawi merupakan salah satu destinasi wisata alam tersembunyi di Desa Sukopuro, Kecamatan Jabung,
@@ -96,11 +112,11 @@ const Pariwisata: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Kolam Pemancingan Section */}
-        <section className="mb-24">
-          <h2 className="text-5xl font-bold text-[#11403A] mb-12 text-center">Kolam Pemancingan KP SK 54</h2>
+        <div className="mb-24">
+          <h3 className="text-5xl font-bold text-[#11403A] mb-12 text-center aestera">Kolam Pemancingan KP SK 54</h3>
           <div className="max-w-5xl mx-auto">
             <img
               src={kolamPemancingImg || "/placeholder.svg"}
@@ -115,10 +131,10 @@ const Pariwisata: React.FC = () => {
               penjualan umpan, makanan ringan, dan minuman bagi para pemancing.
             </p>
           </div>
-        </section>
+        </div>
 
         {/* Acara Malam Section */}
-        <section className="mb-32">
+        <div className="mb-32">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <img
@@ -128,7 +144,7 @@ const Pariwisata: React.FC = () => {
               />
             </div>
             <div className="order-1 lg:order-2">
-              <h2 className="text-5xl font-bold text-[#11403A] mb-8">Acara Hiburan Malam</h2>
+              <h3 className="text-5xl font-bold text-[#11403A] mb-8 aestera">Acara Hiburan Malam</h3>
               <p className="text-gray-700 text-justify leading-relaxed text-lg">
                 Menampilkan suasana panggung hiburan malam yang meriah di Desa Sukopuro. Terlihat kerumunan warga
                 berkumpul di depan panggung yang dihiasi dengan sorotan lampu warna-warni dan sound system besar,
@@ -138,8 +154,9 @@ const Pariwisata: React.FC = () => {
               </p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+        </div>
+      </section>
     </div>
   )
 }

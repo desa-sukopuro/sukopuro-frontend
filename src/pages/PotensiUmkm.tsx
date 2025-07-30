@@ -98,7 +98,17 @@ function PotensiUmkm() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen overflow-hidden relative">
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: "url('./src/assets/picture/bg-fix.png')",
+          backgroundRepeat: "repeat-y",
+          backgroundSize: "auto",
+          backgroundPosition: "center center",
+          opacity: 0.4,
+        }}
+      />
       {/* Hero Section */}
       <div
         className="relative h-[80vh] bg-cover bg-center bg-no-repeat"
@@ -124,9 +134,15 @@ function PotensiUmkm() {
       </div>
 
       {/* Content Section */}
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        {/* UMKM Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+      <section className="py-8 md:py-12 lg:py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-center text-gray-800 aestera">UMKM Desa Sukopuro</h2>
+          <p className="text-base md:text-lg leading-relaxed mb-3 md:mb-4 text-justify text-gray-600 max-w-4xl mx-auto mb-12">
+            Usaha Mikro, Kecil, dan Menengah (UMKM) di Desa Sukopuro berkembang dengan berbagai produk lokal unggulan yang mengandalkan bahan baku dari hasil pertanian desa setempat.
+          </p>
+          
+          {/* UMKM Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
           {currentItems.map((item) => (
             <div
               key={item.id}
@@ -203,7 +219,8 @@ function PotensiUmkm() {
             </button>
           </div>
         )}
-      </div>
+        </div>
+      </section>
     </div>
   )
 }
