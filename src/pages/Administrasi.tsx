@@ -1,4 +1,43 @@
-const Administrasi = () => {
+import React, { useEffect, useState } from 'react';
+
+const sheetID = '1ilSULS5Heue0v0z0yhTix0h6Eeyyn6-bFSvZMz21Bo8';
+const sheetName = 'Form Responses 1';
+const query = 'SELECT A, B, C, D ORDER BY A DESC';
+
+interface DocumentEntry {
+  timestamp: string;
+  title: string;
+  desc: string;
+  docLink: string;
+}
+
+const Administrasi: React.FC = () => {
+  const [entries, setEntries] = useState<DocumentEntry[]>([]);
+
+  useEffect(() => {
+    const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?sheet=${sheetName}&tq=${encodeURIComponent(query)}`;
+
+    fetch(url)
+      .then(res => res.text())
+      .then(text => {
+        const json = JSON.parse(text.substring(47).slice(0, -2));
+        const rows = json.table.rows;
+
+        const formatted: DocumentEntry[] = rows.map((row: any) => {
+          const timestamp = row.c[0]?.f || '';
+          const title = row.c[1]?.v || '';
+          const desc = row.c[2]?.v || '';
+          const link = row.c[3]?.v || '#';
+          return { timestamp, title, desc, docLink: link };
+        });
+
+        setEntries(formatted);
+      })
+      .catch(err => {
+        console.error('Document fetch error:', err);
+      });
+  }, []);
+
   return (
     <main className="min-h-screen background">
       <section className=" text-[#014c51] py-8 md:py-12 lg:py-16 px-4 mt-16">
@@ -24,71 +63,34 @@ const Administrasi = () => {
         </div>
       </section>
 
-      <section className="py-8 md:py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative rounded-2xl md:rounded-3xl drop-shadow-stone-800 p-4 md:p-6 lg:p-8 bg-white overflow-hidden">
-            <div className="absolute top-0 right-0 w-120 h-120 bg-gradient-to-bl from-blue-400 to-transparent rounded-full blur-2xl opacity-40 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-120 h-120 bg-gradient-to-tr from-blue-400 to-transparent rounded-full blur-2xl opacity-40 pointer-events-none" />
-
-            <div className="relative z-10">
-              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-6 md:mb-8 gap-4">
-                <div className="text-center lg:text-left">
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-teal-800 mb-2 aestera">Produk Hukum</h2>
-                  <p className="text-base md:text-lg text-gray-600">Menyediakan produk hukum desa sukopuro</p>
+      <section className="py-8 md:py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 aestera">Produk hukum</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {entries.map((entry, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-xl shadow-md p-5 hover:scale-[1.01] transition flex flex-col justify-between"
+              >
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">{entry.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    {entry.desc.length > 100 ? entry.desc.slice(0, 100) + '...' : entry.desc}
+                  </p>
                 </div>
-                <div className="relative w-full lg:w-auto">
-                  <input
-                    type="text"
-                    placeholder="search"
-                    className="w-full lg:w-64 bg-gray-100 border-none rounded-full px-4 py-3 pl-12 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
-                  />
-                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">🔍</div>
-                </div>
-              </div>
-
-              <div className="space-y-4 md:space-y-6">
-                {[1, 2, 3].map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-white border border-gray-200 rounded-xl md:rounded-2xl p-4 md:p-6 shadow-sm hover:shadow-md transition duration-300"
+                <div className="flex justify-between items-center text-sm">
+                  <span>{entry.timestamp}</span>
+                  <a
+                    href={entry.docLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-400 active:bg-blue-600"
                   >
-                    <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
-                      <div className="sm:w-48 w-full">
-                        <div className="w-full h-full border-2 md:border-2 border-teal-900 overflow-hidden">
-                          <img
-                            src="./src/assets/picture/uud2.jpeg"
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="flex-1 text-start">
-                        <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-teal-800 mb-2 md:mb-3 leading-tight aestera">
-                          Undang Undang Dasar Negara Republik Indonesia
-                        </h3>
-                        <p className="text-gray-600 mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
-                          Berisikan Undang Undang Dasar Negara Indonesia yang membahas tentang ...
-                        </p>
-                        <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 md:px-6 py-2 rounded-lg transition duration-300 flex items-center gap-2 w-full sm:w-fit text-sm md:text-base">
-                          Akses
-                          <span>→</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                    Lihat Dokumen →
+                  </a>
+                </div>
               </div>
-
-
-              <div className="flex justify-center items-center gap-1 md:gap-2 mt-6 md:mt-8">
-                <button className="px-2 md:px-3 py-1 md:py-2 border border-gray-300 rounded text-sm md:text-base hover:bg-gray-50 transition">&lt;</button>
-                <button className="px-2 md:px-3 py-1 md:py-2 border border-gray-300 rounded bg-teal-800 text-white text-sm md:text-base">1</button>
-                <button className="px-2 md:px-3 py-1 md:py-2 border border-gray-300 rounded text-sm md:text-base hover:bg-gray-50 transition">2</button>
-                <button className="px-2 md:px-3 py-1 md:py-2 border border-gray-300 rounded text-sm md:text-base hover:bg-gray-50 transition">3</button>
-                <button className="px-2 md:px-3 py-1 md:py-2 border border-gray-300 rounded text-sm md:text-base hover:bg-gray-50 transition">&gt;</button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
