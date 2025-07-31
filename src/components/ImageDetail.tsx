@@ -28,12 +28,12 @@ const ImageDetail: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 text-center">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-[#11403A] aestera">Data Tidak Ditemukan</h1>
-              <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-600">Mohon maaf, data pengumuman yang Anda cari tidak dapat ditemukan.</p>
+              <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-600">Mohon maaf, data yang Anda cari tidak dapat ditemukan.</p>
               <button 
                 onClick={() => navigate('/pengumuman')} 
                 className="bg-[#11403A] hover:bg-[#0f3832] text-white font-semibold px-6 py-3 rounded-lg transition duration-300"
               >
-                Kembali ke Pengumuman
+                Kembali
               </button>
             </div>
           </div>

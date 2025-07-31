@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 import LandingPage from "./pages/LandingPage";
 import Administrasi from "./pages/Administrasi";
 import AdministrasiDetail from "./pages/Administrasi-Detail";
-import Error from "./pages/Error";
+import ImageDetail from "./components/ImageDetail";
 import PotensiPertanian from "./pages/PotensiPertanian";
 import PotensiUmkm from "./pages/PotensiUmkm";
 import Peta from "./pages/Peta";
@@ -30,7 +30,7 @@ const AppRouter = () => {
           <Route path="/pariwisata" element={<PariwisataDesa />} />
           <Route path="/pengumuman" element={<PengumumanPage />} />
           <Route path="/pengumuman/:id" element={<DetailPengumuman />} />
-          <Route path="*" element={<Error/>} />
+          <Route path="*" element={<ImageDetail/>} />
         </Route>
       </Routes>
     </BrowserRouter>
